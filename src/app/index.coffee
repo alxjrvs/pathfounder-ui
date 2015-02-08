@@ -4,7 +4,9 @@ angular.module "pathfounderUi", ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitiz
       .state "home",
         url: "/",
         templateUrl: "app/welcome/welcome.html",
-        controller: "WelcomeController"
+      .state "character_builder",
+        url: "/character_builder",
+        templateUrl: "app/main/main.html",
 
     $urlRouterProvider.otherwise '/'
 
