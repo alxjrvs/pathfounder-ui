@@ -1,13 +1,19 @@
 .top-bar {
   background: transparent;
+  position: absolute;
+  width: 100%;
+  display: block
 }
 
-h1.header {
+.subhead {
   color: white;
 }
 
-h3.subhead {
-  color: white;
+.hero-row {
+  top: 350px;
+  display: block;
+  position: relative;
 }
+
 // injector
 // endinjector
