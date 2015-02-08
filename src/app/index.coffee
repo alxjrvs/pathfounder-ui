@@ -1,4 +1,4 @@
-angular.module "pathfounderUi", ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router', 'mm.foundation']
+angular.module "pathfounderUi", ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router', 'mm.foundation', 'youtube-embed']
   .config ($stateProvider, $urlRouterProvider) ->
     $stateProvider
       .state "home",
