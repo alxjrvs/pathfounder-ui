@@ -3,8 +3,8 @@ angular.module "pathfounderUi", ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitiz
     $stateProvider
       .state "home",
         url: "/",
-        templateUrl: "app/main/main.html",
-        controller: "MainController"
+        templateUrl: "app/welcome/welcome.html",
+        controller: "WelcomeController"
 
     $urlRouterProvider.otherwise '/'
 
