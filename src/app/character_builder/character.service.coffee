@@ -1,21 +1,11 @@
 class CharacterService
   Character = null
 
-  @$inject: ["$http", "$rootScope", "Restangular"]
-  constructor: (@$http, @$rootScope, @Restangular) ->
-    Character = @Restangular.all('characters')
-      #.addResponseInterceptor (data, operation, what) ->
-        #newData = data["character"]
-        #newData.metadata = data.metadata
-        #return newData
+  @$inject: ["$http", "$rootScope", "CharacterWrapper"] 
+  constructor: (@$http, @$rootScope, @CharacterWrapper) ->
+    Character = @CharacterWrapper
 
   character: ->
-    @_character ?= generateNewCharacter()
-
-  generateNewCharacter = ->
-    post = Character.post
-      character:
-        name: ""
-    return post.$object
+    @_character ?= Character.create()
 
 angular.module("pathfounderUi").service "CharacterService", CharacterService
