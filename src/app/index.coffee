@@ -1,9 +1,12 @@
 angular.module "pathfounderUi.wrappers", ['restangular']
 angular.module "pathfounderUi.characterBuilder", []
 angular.module "pathfounderUi", ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ui.router', 'mm.foundation', 'youtube-embed', "pathfounderUi.characterBuilder", "pathfounderUi.wrappers"]
+
   .config (RestangularProvider) ->
     RestangularProvider.setBaseUrl 'http://localhost:3000/api/v1'
+
     RestangularProvider.setDefaultHttpFields withCredentials: true
+
   .config ($stateProvider, $urlRouterProvider) ->
     $stateProvider
       .state "home",

@@ -3,9 +3,9 @@ angular.module("pathfounderUi.characterBuilder").controller "NewCharacterControl
   "$state"
   "CharacterService"
   ($scope, $state, CharacterService) ->
-    $scope.character = CharacterService.character()
-
     $scope.toRace = ->
-      $state.go 'character_builder.race', id: CharacterService.character().id
+      CharacterService.new(name: $scope.character.name).then (data) ->
+        $state.go 'character_builder.race', id: data.id
+
 ]
 
